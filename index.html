@@ -5,35 +5,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <title>My Website</title>
 </head>
-<body>
-    <!-- Header -->
-    <section id="header">
-      <div class="header container">
-        <div class="nav-bar">
-          <div class="brand">
-            <a href="#hero">
-              <h1><span>M</span>ubaris <span>A</span>li</h1>
-            </a>
-          </div>
-          <div class="nav-list">
-            <div class="hamburger">
-              <div class="bar"></div>
-            </div>
-            <ul>
-              <li><a href="#hero" data-after="Home">Home</a></li>
-              <li><a href="#projects" data-after="Projects">Projects</a></li>
-              <li><a href="#about" data-after="About">About</a></li>
-              <li><a href="#contact" data-after="Contact">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--end header-->
 
-    <!-- Hero Section  -->
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>M</span>ubaris <span>A</span>li</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div id="hamburger" class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul id="menu">
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#projects" data-after="Projects">Projects</a></li>
+            <li><a href="#about" data-after="About">About</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!--end header-->
+
+  <!-- Hero Section  -->
   <section id="hero">
     <div class="hero container">
       <div>
@@ -54,50 +57,81 @@
       <div class="projects-header">
         <h1 class="section-title">Recent <span>Projects</span></h1>
       </div>
+  
       <div class="all-projects">
+  
+        <!-- Project 1 -->
         <div class="project-item">
           <div class="project-info">
-            <h1>Project 1</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+            <h1>AI PSYCHOLOGIST</h1>
+            <h2>
+              <a href="https://github.com/mubarisali/Ai-psychologist/tree/master" target="_blank" class="project-link">
+                Source Code
+              </a>
+            </h2>
+            <p>AI Psychologist – Python, Django, HTML, OpenCV, DNN, Flutter
+            Developed a full-stack, cross-platform AI Psychologist app combining text and facial expression analysis to detect
+            emotions with 87% accuracy across 250 real-world inputs. Implemented NLP with NLTK and custom models to analyze diary
+            entries, improving emotional detection reliability by 20% and providing personalized insights. Engineered a DNN with
+            OpenCV preprocessing for facial emotion classification, reducing real-time latency by 15%. Designed a responsive Flutter
+            frontend with real-time Chart.js dashboards supporting 500+ concurrent users, achieving 85% overall emotion detection
+            accuracy through combined NLP and CNN models</p>
           </div>
           <div class="project-img">
-            <img src="./img/img-1.png" alt="img">
+            <img src="./image/AIpsy.png" alt="AI Psychologist Project">
           </div>
         </div>
+  
+        <!-- Project 2 -->
         <div class="project-item">
           <div class="project-info">
-            <h1>Project 2</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+            <h1>CRM with GEMINI AI ASSISTANT</h1>
+            <h2>
+              <a href="https://github.com/mubarisali/CRM/tree/master" target="_blank" class="project-link">
+                Source Code
+              </a>
+            </h2>
+            <p>Developed a full-stack CRM application using Django and Django REST Framework with secure JWT-based authentication and
+            role-based access control. Integrated Google Gemini AI via LangChain to create a conversational CRM Assistant that
+            handles real-time customer queries with high accuracy. Implemented SimpleJWT for secure registration, login, and token
+            management, ensuring protected access for all roles. Built a context-aware AI chatbot using LLM chain logic, improving
+            response accuracy and reducing support time. Designed RESTful APIs for CRUD operations on customer records, managing
+            over 10,000 daily transactions with sub-50ms response times. Created a responsive Bootstrap 5 UI with modals and
+            Axios-powered AJAX updates for seamless, reload-free record management.<br></p>
           </div>
           <div class="project-img">
-            <img src="./img/img-1.png" alt="img">
+            <img src="./image/crm (2).png" alt="Project 2">
           </div>
         </div>
+  
+        <!-- Project 3 -->
         <div class="project-item">
           <div class="project-info">
-            <h1>Project 3</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+            <h1>FOOD ORDER MANAGEMENT</h1>
+            <h2>
+              <a href="https://github.com/mubarisali/order-management" target="_blank" class="project-link">
+                Source Code
+              </a>
+            </h2>
+            <p>This project is a full-featured Order Management System built using Python and Django. It allows users to browse a menu,
+            select food items, and choose between dine-in or takeaway options. The system tracks each order in real time, helping
+            the restaurant manage order preparation efficiently. It also provides detailed daily sales reports, giving insights into
+            the restaurant’s performance. The platform ensures smooth order processing, accurate tracking, and an easy-to-use
+            interface for both staff and customers.</p>
           </div>
           <div class="project-img">
-            <img src="./img/img-1.png" alt="img">
+            <img src="./image/fom.png" alt="Project 3">
           </div>
         </div>
+  
       </div>
     </div>
   </section>
+
   <!-- End Projects Section -->
 
-   <!-- About Section -->
-   <section id="about">
+  <!-- About Section -->
+  <section id="about">
     <div class="about container">
       <div class="col-left">
         <div class="about-img">
@@ -106,49 +140,74 @@
       </div>
       <div class="col-right">
         <h1 class="section-title">About <span>me</span></h1>
-        <h2>Front End Developer</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, velit alias eius non illum beatae atque
-          repellat ratione qui veritatis repudiandae adipisci maiores. At inventore necessitatibus deserunt
-          exercitationem cumque earum omnis ipsum rem accusantium quis, quas quia, accusamus provident suscipit magni!
-          Expedita sint ad dolore, commodi labore nihil velit earum ducimus nulla quae nostrum fugit aut, deserunt
-          reprehenderit libero enim!</p>
-        <a href="#" class="cta">Download Resume</a>
+        <h2><strong> AI INTEGRATED FULL STACK DEVELOPER </strong></h2>
+        <p>  with hands-on experience in Python, Django, and Flutter. I specialize in full
+        stack development with a focus on AI-powered applications. I've built an AI Psychologist app that analyzes user input to
+        detect emotions, and a CRM system enhanced with Google Gemini AI to intelligently process client inquiries. My projects
+        emphasize clean and user-friendly interfaces designed to solve real-world problems through practical, accessible
+        solutions. My technical skills include working with languages like JavaScript, Python, Java, HTML, CSS, and Dart;
+        frameworks like Django, Django REST Framework, Flutter, Bootstrap, and Node.js; libraries like Open CV, Chart.js, Google
+        Gemini API, DNN, NLTK, Axios, and JWT; databases like MongoDB, PostgreSQL, SQLite, and MySQL; and dev tools like Visual
+        Studio Code, Git, Android Studio, PyCharm, and Postman.
+</p>
+        <a href="https://drive.google.com/uc?export=download&id=1DchyQvkUBhhI8UVFhAMHeB7ZwRM7aofj" class="cta">Download Resume</a>
       </div>
     </div>
   </section>
   <!-- End About Section -->
 
   <!-- Contact Section -->
-  <section id="contact">
-    <div class="contact container">
-      <div>
-        <h1 class="section-title">Contact <span>info</span></h1>
-      </div>
-      <div class="contact-items">
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
+<section id="contact">
+  <div class="contact container">
+    <div>
+      <h1 class="section-title">Contact <span>info</span></h1>
+    </div>
+    <div class="contact-items">
+
+      <!-- Phone -->
+      <div class="contact-item">
+        <a href="tel:+916235784647" class="contact-link">
+          <div class="icon">
+            <img src="https://img.icons8.com/bubbles/100/000000/phone.png" />
+          </div>
           <div class="contact-info">
             <h1>Phone</h1>
             <h2>+91 6235784647</h2>
           </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
+        </a>
+      </div>
+
+      <!-- Email -->
+      <div class="contact-item">
+        <a href="mailto:mubarisali97@gmail.com" class="contact-link">
+          <div class="icon">
+            <img src="https://img.icons8.com/bubbles/100/000000/new-post.png" />
+          </div>
           <div class="contact-info">
             <h1>Email</h1>
             <h2>mubarisali97@gmail.com</h2>
           </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" /></div>
+        </a>
+      </div>
+
+      <!-- Address -->
+      <div class="contact-item">
+        <a href="https://www.google.com/maps?q=Biyyam+ponnani,+malappuram+kerala" target="_blank" class="contact-link">
+          <div class="icon">
+            <img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" />
+          </div>
           <div class="contact-info">
             <h1>Address</h1>
-            <h2>Biyyam ponnani,malappuram kerala</h2>
+            <h2>Biyyam ponnani, malappuram, kerala</h2>
           </div>
-        </div>
+        </a>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+
   <!-- End Contact Section -->
 
   <!-- Footer -->
@@ -156,6 +215,12 @@
     <div class="footer container">
       <div class="brand">
         <h1><span>M</span>ubaris <span>A</span>li</h1>
+      </div>
+      <div class="social-icon">
+        <a href="https://wa.me/+916235784647" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://github.com/mubarisali" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/mubaris-t-a53497366" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://instagram.com/_mubaris.__" target="_blank"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
   </section>
