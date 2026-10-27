@@ -4,227 +4,483 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mubaris T | AI Integrated Python Full Stack Developer</title>
+  <meta name="description" content="Mubaris T — Python Full Stack Developer (Django, DRF, Next.js, React) from Kerala, India, building production web apps, REST APIs and multi-tenant HRMS software.">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <title>My Website</title>
+  <script>
+    document.documentElement.classList.add('js');
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
 </head>
 
 <body>
-  <!-- Header -->
-  <section id="header">
-    <div class="header container">
-      <div class="nav-bar">
-        <div class="brand">
-          <a href="#hero">
-            <h1><span>M</span>ubaris <span>A</span>li</h1>
-          </a>
+  <div id="progress" class="progress"></div>
+
+  <!-- Drifting tech-skill background (filled by app.js) -->
+  <div id="tech-bg" class="tech-bg" aria-hidden="true"></div>
+
+  <!-- Header: editor-style tabs -->
+  <header id="header" class="header">
+    <nav class="nav wrap">
+      <a href="#prologue" class="brand"><span class="prompt">~/</span>mubaris<span class="caret">_</span></a>
+      <ul id="menu" class="nav-links">
+        <li><a href="#prologue"><i class="fa-solid fa-house"></i>home.py</a></li>
+        <li><a href="#education"><i class="fa-brands fa-markdown"></i>about.md</a></li>
+        <li><a href="#delemon"><i class="fa-solid fa-code-commit"></i>experience.log</a></li>
+        <li><a href="#projects"><i class="fa-solid fa-folder"></i>projects/</a></li>
+        <li><a href="#skills"><i class="fa-solid fa-code"></i>skills.json</a></li>
+        <li><a href="#contact"><i class="fa-solid fa-terminal"></i>contact.sh</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle colour theme"><i class="fa-solid fa-moon"></i></button>
+        <button id="hamburger" class="icon-btn hamburger" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="story wrap">
+    <!-- Sticky stage: the developer character in a preview window -->
+    <aside id="stage" class="stage" data-scene="prologue" aria-live="polite">
+      <div class="stage-window">
+        <div class="win-bar">
+          <span class="win-dots"><i></i><i></i><i></i></span>
+          <span class="win-title"><i class="fa-regular fa-eye"></i> preview — <span id="chapter-file">prologue.py</span></span>
         </div>
-        <div class="nav-list">
-          <div id="hamburger" class="hamburger">
-            <div class="bar"></div>
+
+        <div class="char-wrap">
+          <div id="props" class="props"></div>
+          <svg class="character" viewBox="0 0 360 380" role="img" aria-label="Illustration of Mubaris, a developer at his desk">
+            <defs>
+              <linearGradient id="g-skin" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#d9a074" />
+                <stop offset="1" stop-color="#bf7f55" />
+              </linearGradient>
+              <linearGradient id="g-hoodie" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#3a414b" />
+                <stop offset="1" stop-color="#262b33" />
+              </linearGradient>
+              <linearGradient id="g-lid" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#e3e8ee" />
+                <stop offset="1" stop-color="#aab4bf" />
+              </linearGradient>
+              <linearGradient id="g-desk" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#8a5a3b" />
+                <stop offset="1" stop-color="#6b4329" />
+              </linearGradient>
+            </defs>
+
+            <circle class="c-glow" cx="180" cy="190" r="150" />
+
+            <g class="c-person">
+              <!-- body -->
+              <path fill="url(#g-hoodie)" d="M92 312 C92 262 124 230 180 230 C236 230 268 262 268 312 Z" />
+              <path class="c-shirt" d="M162 232 L180 266 L198 232 Z" />
+              <path class="c-hood" d="M134 236 C146 256 214 256 226 236 C218 228 142 228 134 236 Z" />
+              <line class="c-string" x1="170" y1="250" x2="168" y2="282" />
+              <line class="c-string" x1="190" y1="250" x2="192" y2="282" />
+              <!-- headphones around neck -->
+              <path class="c-phones" d="M140 236 C140 266 220 266 220 236" />
+              <ellipse class="c-cup" cx="139" cy="242" rx="10" ry="14" />
+              <ellipse class="c-cup" cx="221" cy="242" rx="10" ry="14" />
+              <!-- neck + head -->
+              <rect fill="url(#g-skin)" x="166" y="194" width="28" height="42" rx="11" />
+              <ellipse fill="url(#g-skin)" cx="133" cy="154" rx="9" ry="13" />
+              <ellipse fill="url(#g-skin)" cx="227" cy="154" rx="9" ry="13" />
+              <ellipse fill="url(#g-skin)" cx="180" cy="148" rx="48" ry="56" />
+              <circle class="c-blush" cx="153" cy="170" r="7" />
+              <circle class="c-blush" cx="207" cy="170" r="7" />
+              <!-- hair -->
+              <path class="c-hair" d="M131 142 C120 90 152 70 188 73 C222 75 240 98 231 142 C227 120 214 108 198 104 C204 110 205 116 203 120 C186 106 158 104 141 116 C135 122 133 132 131 142 Z" />
+              <path class="c-hair-hi" d="M160 82 C176 76 198 77 212 86" />
+              <!-- beard + moustache -->
+              <path class="c-hair" d="M133 156 C135 196 158 208 180 208 C202 208 225 196 227 156 C222 178 206 190 180 190 C154 190 138 178 133 156 Z" />
+              <path class="c-hair" d="M163 178 Q180 170 197 178 Q180 184 163 178 Z" />
+              <path class="c-teeth" d="M169 186 Q180 196 191 186 Z" />
+              <!-- eyes -->
+              <g class="c-eyes">
+                <ellipse cx="162" cy="150" rx="4.5" ry="5.5" />
+                <ellipse cx="198" cy="150" rx="4.5" ry="5.5" />
+              </g>
+              <circle class="c-eye-hi" cx="163.5" cy="148" r="1.4" />
+              <circle class="c-eye-hi" cx="199.5" cy="148" r="1.4" />
+              <!-- glasses -->
+              <g class="c-glasses">
+                <rect x="144" y="137" width="35" height="26" rx="9" />
+                <rect x="181" y="137" width="35" height="26" rx="9" />
+                <line x1="179" y1="146" x2="181" y2="146" />
+                <line x1="144" y1="146" x2="135" y2="143" />
+                <line x1="216" y1="146" x2="225" y2="143" />
+              </g>
+              <path class="c-brow" d="M149 128 Q161 122 173 127" />
+              <path class="c-brow" d="M187 127 Q199 122 211 128" />
+
+              <!-- graduation cap (school scene) -->
+              <g class="c-cap">
+                <path d="M146 92 C146 108 214 108 214 92 L214 80 L146 80 Z" fill="#161b22" />
+                <path d="M180 58 L248 82 L180 106 L112 82 Z" fill="#21262d" />
+                <path d="M180 82 L232 92 L234 116" class="c-tassel" />
+                <circle cx="234" cy="118" r="4" fill="#d29922" />
+              </g>
+
+              <!-- typing arms -->
+              <g class="c-type-arms">
+                <path class="c-sleeve" d="M112 262 Q100 292 128 304" />
+                <path class="c-sleeve" d="M248 262 Q260 292 232 304" />
+              </g>
+              <!-- waving arm -->
+              <g class="c-wave-arm">
+                <path class="c-sleeve" d="M250 262 Q284 240 292 196" />
+                <circle fill="url(#g-skin)" cx="293" cy="186" r="13" />
+              </g>
+            </g>
+
+            <!-- desk -->
+            <rect fill="url(#g-desk)" x="18" y="310" width="324" height="16" rx="5" />
+            <rect class="c-desk-front" x="34" y="326" width="292" height="34" rx="6" />
+
+            <!-- plant -->
+            <g class="c-plant">
+              <path d="M38 274 L74 274 L70 310 L42 310 Z" fill="#c4683f" />
+              <ellipse cx="46" cy="258" rx="8" ry="18" fill="#3fb950" transform="rotate(-28 46 258)" />
+              <ellipse cx="56" cy="250" rx="8" ry="22" fill="#2ea043" />
+              <ellipse cx="67" cy="258" rx="8" ry="18" fill="#3fb950" transform="rotate(28 67 258)" />
+            </g>
+
+            <!-- mug with steam -->
+            <g class="c-mug">
+              <path class="c-steam" d="M292 262 C286 252 298 246 292 236" />
+              <path class="c-steam s2" d="M304 262 C298 252 310 246 304 236" />
+              <rect x="282" y="270" width="32" height="40" rx="6" class="c-mug-body" />
+              <path d="M314 280 C328 280 328 300 314 300" fill="none" stroke-width="5" class="c-mug-handle" />
+              <text x="298" y="295" text-anchor="middle" class="c-mug-text">&lt;/&gt;</text>
+            </g>
+
+            <!-- laptop (back of lid faces us, covered in stickers) -->
+            <g class="c-laptop">
+              <rect fill="url(#g-lid)" x="104" y="222" width="152" height="90" rx="9" />
+              <circle cx="180" cy="266" r="11" fill="#f6f8fa" opacity="0.7" />
+              <!-- python sticker -->
+              <g transform="translate(124 236)">
+                <rect width="26" height="26" rx="7" fill="#3776ab" />
+                <path d="M7 13 h12" stroke="#ffd43b" stroke-width="5" stroke-linecap="round" />
+                <circle cx="9" cy="8" r="2" fill="#ffd43b" />
+              </g>
+              <!-- django sticker -->
+              <g transform="translate(212 236)">
+                <rect width="30" height="20" rx="5" fill="#0c4b33" />
+                <text x="15" y="14.5" text-anchor="middle" class="c-sticker-text">dj</text>
+              </g>
+              <!-- code sticker -->
+              <g transform="translate(206 280)">
+                <rect width="34" height="18" rx="9" fill="#2f81f7" />
+                <text x="17" y="13" text-anchor="middle" class="c-sticker-text">{ }</text>
+              </g>
+              <!-- react sticker -->
+              <g transform="translate(132 290)">
+                <ellipse rx="11" ry="4.5" fill="none" stroke="#61dafb" stroke-width="2" />
+                <ellipse rx="11" ry="4.5" fill="none" stroke="#61dafb" stroke-width="2" transform="rotate(60)" />
+                <ellipse rx="11" ry="4.5" fill="none" stroke="#61dafb" stroke-width="2" transform="rotate(-60)" />
+                <circle r="2.4" fill="#61dafb" />
+              </g>
+              <rect x="88" y="308" width="184" height="7" rx="3" fill="#8c959f" />
+              <circle class="c-led" cx="180" cy="311.5" r="1.6" />
+            </g>
+
+            <!-- hands on the keyboard -->
+            <g class="c-hands">
+              <ellipse class="c-hand-l" fill="url(#g-skin)" cx="128" cy="306" rx="12" ry="9" />
+              <ellipse class="c-hand-r" fill="url(#g-skin)" cx="232" cy="306" rx="12" ry="9" />
+            </g>
+          </svg>
+        </div>
+
+        <!-- console narration -->
+        <div class="console">
+          <div class="console-bar"><span>TERMINAL</span><span>OUTPUT</span><span class="active">DEBUG CONSOLE</span></div>
+          <p class="console-line"><span class="c-prompt">&gt;</span> <span id="console-text"></span><span class="console-caret"></span></p>
+        </div>
+      </div>
+    </aside>
+
+    <div class="chapters">
+      <!-- Prologue -->
+      <section id="prologue" class="chapter hero" data-scene="prologue">
+        <p class="comment reveal">// hello, world</p>
+        <h1 class="reveal">Hi, I'm <span class="hl">Mubaris</span>.<br>I write Python that <span class="hl-2">ships</span>.</h1>
+
+        <div class="terminal reveal">
+          <div class="win-bar">
+            <span class="win-dots"><i></i><i></i><i></i></span>
+            <span class="win-title">zsh — mubaris@portfolio</span>
           </div>
-          <ul id="menu">
-            <li><a href="#hero" data-after="Home">Home</a></li>
-            <li><a href="#projects" data-after="Projects">Projects</a></li>
-            <li><a href="#about" data-after="About">About</a></li>
-            <li><a href="#contact" data-after="Contact">Contact</a></li>
+          <div id="term" class="term-body" aria-label="Terminal introduction"></div>
+        </div>
+
+        <div class="hero-cta reveal">
+          <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-play"></i> ./view_projects.sh</a>
+          <a href="./Mubaris_T_Resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> resume.pdf</a>
+        </div>
+
+        <div class="hero-social reveal">
+          <a href="https://www.linkedin.com/in/mubaris-t-10b625400" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i> linkedin</a>
+          <a href="https://github.com/mubarisali" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> github</a>
+          <a href="https://www.instagram.com/_mubaris.__/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> instagram</a>
+        </div>
+
+        <div class="stats reveal">
+          <div class="stat"><span class="stat-key">experience</span><strong><b data-count="1">0</b>+ yr</strong></div>
+          <div class="stat"><span class="stat-key">live_sites</span><strong><b data-count="20">0</b></strong></div>
+          <div class="stat"><span class="stat-key">built_solo</span><strong><b data-count="10">0</b>+</strong></div>
+          <div class="stat"><span class="stat-key">ai_accuracy</span><strong><b data-count="87">0</b>%</strong></div>
+        </div>
+      </section>
+
+      <!-- Chapter 1 -->
+      <section id="education" class="chapter" data-scene="school">
+        <p class="comment reveal">// 01 — the_spark · 2022 – 2025</p>
+        <h2 class="chapter-title reveal">Where it started</h2>
+        <p class="chapter-lead reveal">A degree where code met artificial intelligence, robotics and virtual reality, and where I got hooked on building things.</p>
+
+        <div class="file-card reveal">
+          <div class="file-tab"><i class="fa-brands fa-markdown"></i> education.md</div>
+          <div class="file-body">
+            <h3><span class="md">#</span> Bachelor of Computer Application</h3>
+            <p class="accent-text">Specialisation: AI, Robotics and Virtual Reality</p>
+            <p class="muted">Srinivas University Institute of Computer Science and Information Science · Mangalore, Karnataka</p>
+            <h3 class="mt"><span class="md">##</span> Certification</h3>
+            <p class="muted"><i class="fa-solid fa-certificate accent-text"></i> AI Integrated Python Full Stack Developer</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chapter 2 -->
+      <section id="internship" class="chapter" data-scene="intern">
+        <p class="comment reveal">// 02 — first_commit · Jan – Jun 2025</p>
+        <h2 class="chapter-title reveal">My first commit</h2>
+        <p class="chapter-lead reveal">My first job, with real clients, real deadlines and my first code in production.</p>
+
+        <div class="commit reveal">
+          <div class="commit-head">
+            <span class="commit-hash">commit 7be21d0</span>
+            <span class="badge">Jan 2025 – Jun 2025</span>
+          </div>
+          <h3>Python Developer Intern <span class="at">@ Adzyn Digital Pvt. Ltd</span></h3>
+          <p class="commit-meta"><i class="fa-solid fa-location-dot"></i> Ernakulam, Kerala</p>
+          <ul class="diff">
+            <li><span>+</span> Assisted in developing websites with HTML, CSS, JavaScript, Python, Django and Django REST Framework.</li>
+            <li><span>+</span> Worked with REST APIs to retrieve and display database-driven content.</li>
           </ul>
         </div>
+      </section>
 
-      </div>
-    </div>
-  </section>
-  <!--end header-->
+      <!-- Chapter 3 -->
+      <section id="delemon" class="chapter" data-scene="work">
+        <p class="comment reveal">// 03 — production · Aug 2025 – present</p>
+        <h2 class="chapter-title reveal">Pushing to production</h2>
+        <p class="chapter-lead reveal">
+          At <strong>Delemon Technology</strong>, a Dubai-based company with a team in Thalassery, I support
+          <strong>nearly 20 live websites</strong> and have built <strong>10+ of them end-to-end</strong> myself.
+        </p>
 
-  <!-- Hero Section  -->
-  <section id="hero">
-    <div class="hero container">
-      <div>
-        <h1>Hello, <span></span></h1>
-        <h1>My Name is <span></span></h1>
-        <h1>Mubaris <span></span></h1>
-        <a href="#projects" type="button" class="cta">Portfolio</a>
-      </div>
-    </div>
-  </section>
-  <!-- End Hero Section  -->
-
-
-  <!--project-->
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="projects container">
-      <div class="projects-header">
-        <h1 class="section-title">Recent <span>Projects</span></h1>
-      </div>
-  
-      <div class="all-projects">
-  
-        <!-- Project 1 -->
-        <div class="project-item">
-          <div class="project-info">
-            <h1>AI PSYCHOLOGIST</h1>
-            <h2>
-              <a href="https://github.com/mubarisali/Ai-psychologist/tree/master" target="_blank" class="project-link">
-                Source Code
-              </a>
-            </h2>
-            <p>AI Psychologist – Python, Django, HTML, OpenCV, DNN, Flutter
-            Developed a full-stack, cross-platform AI Psychologist app combining text and facial expression analysis to detect
-            emotions with 87% accuracy across 250 real-world inputs. Implemented NLP with NLTK and custom models to analyze diary
-            entries, improving emotional detection reliability by 20% and providing personalized insights. Engineered a DNN with
-            OpenCV preprocessing for facial emotion classification, reducing real-time latency by 15%. Designed a responsive Flutter
-            frontend with real-time Chart.js dashboards supporting 500+ concurrent users, achieving 85% overall emotion detection
-            accuracy through combined NLP and CNN models</p>
+        <div class="commit reveal">
+          <div class="commit-head">
+            <span class="commit-hash">commit a3f9c21 <span class="head-ref">(HEAD -&gt; main)</span></span>
+            <span class="badge badge-live"><span class="dot"></span> Aug 2025 – Present</span>
           </div>
-          <div class="project-img">
-            <img src="./image/AIpsy.png" alt="AI Psychologist Project">
+          <h3>Python Full Stack Developer <span class="at">@ Delemon Technology</span></h3>
+          <p class="commit-meta"><i class="fa-solid fa-location-dot"></i> Thalassery, Kerala · Dubai-based company</p>
+          <ul class="diff">
+            <li><span>+</span> Responsive <strong>Next.js and React</strong> interfaces with reusable components, property listings, forms and routing.</li>
+            <li><span>+</span> <strong>Django REST Framework APIs</strong> for property data, inquiries, authentication and site features, connected with Axios.</li>
+            <li><span>+</span> Technical and on-page <strong>SEO</strong>: metadata, page structure, indexing investigations and performance.</li>
+            <li><span>+</span> <strong>Brevo</strong> integrations for inquiry forms, lead capture and email workflows.</li>
+            <li><span>+</span> Deployments and production ops with <strong>Nginx, Gunicorn and PM2</strong>, plus troubleshooting and client enhancements.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Chapter 4 -->
+      <section id="xopp" class="chapter" data-scene="hrms">
+        <p class="comment reveal">// 04 — the_big_build</p>
+        <h2 class="chapter-title reveal">X-OPP CRM — multi-tenant HRMS</h2>
+        <p class="chapter-lead reveal">
+          A configurable HRMS where every company runs its own policies, approval hierarchies and workflows.
+          These are the modules I've contributed to.
+        </p>
+
+        <div class="modules">
+          <div class="module reveal"><p class="module-path"><i class="fa-solid fa-folder"></i> employees/</p><p>Records, departments, designations, reporting lines, documents and profile-change approvals.</p></div>
+          <div class="module reveal"><p class="module-path"><i class="fa-solid fa-folder"></i> attendance/</p><p>Clock-in/out, <strong>GPS geofencing</strong>, shift scheduling, regularisation, shift swaps and holidays.</p></div>
+          <div class="module reveal"><p class="module-path"><i class="fa-solid fa-folder"></i> leave/</p><p>Balances, accrual rules, half-days, carry-forward, encashment, expiry and comp-off.</p></div>
+          <div class="module reveal"><p class="module-path"><i class="fa-solid fa-folder"></i> payroll/</p><p>Salary structures, payslips, loss-of-pay, exports, expense claims, advances and loans.</p></div>
+          <div class="module reveal"><p class="module-path"><i class="fa-solid fa-folder"></i> recruitment/</p><p>Requisitions, candidates, interview feedback, offers, onboarding, probation and offboarding.</p></div>
+          <div class="module reveal"><p class="module-path"><i class="fa-solid fa-folder"></i> core/</p><p>Performance reviews, assets, announcements, dashboards, audit trails and <strong>RBAC</strong>.</p></div>
+        </div>
+      </section>
+
+      <!-- Chapter 5 -->
+      <section id="projects" class="chapter" data-scene="projects">
+        <p class="comment reveal">// 05 — side_projects</p>
+        <h2 class="chapter-title reveal">Repositories</h2>
+        <p class="chapter-lead reveal">Projects I build outside work to explore what AI can do inside real products.</p>
+
+        <article class="repo reveal">
+          <div class="repo-img"><img src="./image/AIpsy.png" alt="AI Psychologist app screenshot" loading="lazy"></div>
+          <div class="repo-body">
+            <a class="repo-name" href="https://github.com/mubarisali/Ai-psychologist/tree/master" target="_blank" rel="noopener"><i class="fa-solid fa-book-bookmark"></i> mubarisali / <strong>Ai-psychologist</strong></a>
+            <p class="muted">Detects emotion from text and facial expressions, reaching <strong>87% accuracy</strong> across 250 real-world inputs. Uses NLTK and custom models for NLP and DNN/OpenCV for faces, with a Flutter frontend and real-time Chart.js dashboards for 500+ concurrent users.</p>
+            <ul class="topics"><li>django</li><li>opencv</li><li>dnn</li><li>nltk</li><li>flutter</li></ul>
+            <p class="repo-meta"><span><i class="lang-dot py"></i> Python</span></p>
+          </div>
+        </article>
+
+        <article class="repo reveal">
+          <div class="repo-img"><img src="./image/crm (2).png" alt="CRM with Gemini AI Assistant screenshot" loading="lazy"></div>
+          <div class="repo-body">
+            <a class="repo-name" href="https://github.com/mubarisali/CRM/tree/master" target="_blank" rel="noopener"><i class="fa-solid fa-book-bookmark"></i> mubarisali / <strong>CRM</strong></a>
+            <p class="muted">A DRF-powered CRM with <strong>JWT auth</strong>, role-based access and a responsive Bootstrap UI. <strong>Google Gemini via LangChain</strong> provides a context-aware conversational assistant, and Axios handles CRUD without page reloads.</p>
+            <ul class="topics"><li>django-rest-framework</li><li>jwt</li><li>gemini</li><li>langchain</li></ul>
+            <p class="repo-meta"><span><i class="lang-dot py"></i> Python</span><span><i class="lang-dot js"></i> JavaScript</span></p>
+          </div>
+        </article>
+
+        <article class="repo reveal">
+          <div class="repo-img"><img src="./image/fom.png" alt="Food Order Management screenshot" loading="lazy"></div>
+          <div class="repo-body">
+            <a class="repo-name" href="https://github.com/mubarisali/order-management" target="_blank" rel="noopener"><i class="fa-solid fa-book-bookmark"></i> mubarisali / <strong>order-management</strong></a>
+            <p class="muted">Customers browse the menu and choose dine-in or takeaway. Orders are tracked in real time for the kitchen, and daily sales reports show how the restaurant is performing.</p>
+            <ul class="topics"><li>django</li><li>orders</li><li>reports</li></ul>
+            <p class="repo-meta"><span><i class="lang-dot py"></i> Python</span></p>
+          </div>
+        </article>
+      </section>
+
+      <!-- Chapter 6 -->
+      <section id="skills" class="chapter" data-scene="skills">
+        <p class="comment reveal">// 06 — dependencies</p>
+        <h2 class="chapter-title reveal">Tech stack</h2>
+        <p class="chapter-lead reveal">Everything I've installed along the way.</p>
+
+        <div class="marquee reveal" aria-hidden="true">
+          <div class="marquee-track" data-marquee="Python,Django,Django REST Framework,Next.js,React,JavaScript,PostgreSQL,LangChain,Google Gemini,OpenCV"></div>
+        </div>
+        <div class="marquee reverse reveal" aria-hidden="true">
+          <div class="marquee-track" data-marquee="Nginx,Gunicorn,PM2,Git,JWT,Axios,MySQL,MongoDB,Flutter,NLTK,Chart.js,Brevo,Technical SEO"></div>
+        </div>
+
+        <div class="file-card reveal">
+          <div class="file-tab"><i class="fa-solid fa-code"></i> skills.json</div>
+          <pre class="code" id="skills-code"></pre>
+        </div>
+      </section>
+
+      <!-- Epilogue -->
+      <section id="contact" class="chapter" data-scene="contact">
+        <p class="comment reveal">// 07 — open_pull_request</p>
+        <h2 class="chapter-title reveal">Let's build something</h2>
+        <p class="chapter-lead reveal">Have a role, a project or an idea? Send a message and it lands straight in my email and on WhatsApp.</p>
+
+        <form id="contact-form" class="terminal contact-form reveal" novalidate>
+          <div class="win-bar">
+            <span class="win-dots"><i></i><i></i><i></i></span>
+            <span class="win-title">contact.sh</span>
+          </div>
+          <div class="form-body">
+            <p class="form-cmd"><span class="c-prompt">$</span> ./send_message.sh \</p>
+            <div class="field-row">
+              <label class="field">
+                <span>--name</span>
+                <input type="text" name="name" required autocomplete="name" placeholder="&quot;Jane Doe&quot;">
+              </label>
+              <label class="field">
+                <span>--email</span>
+                <input type="email" name="email" required autocomplete="email" placeholder="&quot;jane@company.com&quot;">
+              </label>
+            </div>
+            <div class="field-row">
+              <label class="field">
+                <span>--phone <em># optional</em></span>
+                <input type="tel" name="phone" autocomplete="tel" placeholder="&quot;+91 98765 43210&quot;">
+              </label>
+              <label class="field">
+                <span>--topic</span>
+                <select name="topic">
+                  <option>Job opportunity</option>
+                  <option>Freelance project</option>
+                  <option>Collaboration</option>
+                  <option>Just saying hi</option>
+                </select>
+              </label>
+            </div>
+            <label class="field">
+              <span>--message</span>
+              <textarea name="message" rows="5" required placeholder="&quot;Tell me a little about what you have in mind…&quot;"></textarea>
+            </label>
+            <!-- spam trap: real visitors never fill this -->
+            <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="form-submit">
+                <i class="fa-solid fa-paper-plane"></i> <span>Send message</span>
+              </button>
+              <p id="form-status" class="form-status" role="status"></p>
+            </div>
+          </div>
+        </form>
+
+        <div id="form-success" class="terminal form-success" hidden>
+          <div class="win-bar">
+            <span class="win-dots"><i></i><i></i><i></i></span>
+            <span class="win-title">contact.sh — exit 0</span>
+          </div>
+          <div class="form-body">
+            <p class="ok-line"><span class="ok">✔</span> Message delivered</p>
+            <p class="muted" id="success-text">It's in my inbox, and I'll get back to you soon.</p>
+            <a id="wa-followup" class="btn btn-ghost" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Also send it on WhatsApp</a>
           </div>
         </div>
-  
-        <!-- Project 2 -->
-        <div class="project-item">
-          <div class="project-info">
-            <h1>CRM with GEMINI AI ASSISTANT</h1>
-            <h2>
-              <a href="https://github.com/mubarisali/CRM/tree/master" target="_blank" class="project-link">
-                Source Code
-              </a>
-            </h2>
-            <p>Developed a full-stack CRM application using Django and Django REST Framework with secure JWT-based authentication and
-            role-based access control. Integrated Google Gemini AI via LangChain to create a conversational CRM Assistant that
-            handles real-time customer queries with high accuracy. Implemented SimpleJWT for secure registration, login, and token
-            management, ensuring protected access for all roles. Built a context-aware AI chatbot using LLM chain logic, improving
-            response accuracy and reducing support time. Designed RESTful APIs for CRUD operations on customer records, managing
-            over 10,000 daily transactions with sub-50ms response times. Created a responsive Bootstrap 5 UI with modals and
-            Axios-powered AJAX updates for seamless, reload-free record management.<br></p>
-          </div>
-          <div class="project-img">
-            <img src="./image/crm (2).png" alt="Project 2">
-          </div>
+
+        <div class="contact-grid reveal">
+          <a href="mailto:mubarisali97@gmail.com" class="contact-item"><i class="fa-solid fa-envelope"></i><div><span>email</span><strong>mubarisali97@gmail.com</strong></div></a>
+          <a href="https://wa.me/916235784647" target="_blank" rel="noopener" class="contact-item"><i class="fa-brands fa-whatsapp"></i><div><span>whatsapp</span><strong>+91 62357 84647</strong></div></a>
+          <a href="https://www.google.com/maps?q=Malappuram,+Kerala" target="_blank" rel="noopener" class="contact-item"><i class="fa-solid fa-location-dot"></i><div><span>location</span><strong>Malappuram, Kerala</strong></div></a>
+        
         </div>
-  
-        <!-- Project 3 -->
-        <div class="project-item">
-          <div class="project-info">
-            <h1>FOOD ORDER MANAGEMENT</h1>
-            <h2>
-              <a href="https://github.com/mubarisali/order-management" target="_blank" class="project-link">
-                Source Code
-              </a>
-            </h2>
-            <p>This project is a full-featured Order Management System built using Python and Django. It allows users to browse a menu,
-            select food items, and choose between dine-in or takeaway options. The system tracks each order in real time, helping
-            the restaurant manage order preparation efficiently. It also provides detailed daily sales reports, giving insights into
-            the restaurant’s performance. The platform ensures smooth order processing, accurate tracking, and an easy-to-use
-            interface for both staff and customers.</p>
-          </div>
-          <div class="project-img">
-            <img src="./image/fom.png" alt="Project 3">
-          </div>
-        </div>
-  
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p><span class="c-prompt">$</span> echo "© <span id="year"></span> Mubaris T — built with HTML, CSS &amp; JS"</p>
+      <div class="social">
+        <a href="https://github.com/mubarisali" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/mubaris-t-10b625400" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://wa.me/916235784647" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/_mubaris.__/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
       </div>
     </div>
-  </section>
+  </footer>
 
-  <!-- End Projects Section -->
-
-  <!-- About Section -->
-  <section id="about">
-    <div class="about container">
-      <div class="col-left">
-        <div class="about-img">
-          <img src="./image/resume.jpg" alt="img">
-        </div>
-      </div>
-      <div class="col-right">
-        <h1 class="section-title">About <span>me</span></h1>
-        <h2><strong> AI INTEGRATED FULL STACK DEVELOPER </strong></h2>
-        <p>  with hands-on experience in Python, Django, and Flutter. I specialize in full
-        stack development with a focus on AI-powered applications. I've built an AI Psychologist app that analyzes user input to
-        detect emotions, and a CRM system enhanced with Google Gemini AI to intelligently process client inquiries. My projects
-        emphasize clean and user-friendly interfaces designed to solve real-world problems through practical, accessible
-        solutions. My technical skills include working with languages like JavaScript, Python, Java, HTML, CSS, and Dart;
-        frameworks like Django, Django REST Framework, Flutter, Bootstrap, and Node.js; libraries like Open CV, Chart.js, Google
-        Gemini API, DNN, NLTK, Axios, and JWT; databases like MongoDB, PostgreSQL, SQLite, and MySQL; and dev tools like Visual
-        Studio Code, Git, Android Studio, PyCharm, and Postman.
-</p>
-        <a href="https://drive.google.com/uc?export=download&id=1DchyQvkUBhhI8UVFhAMHeB7ZwRM7aofj" class="cta">Download Resume</a>
-      </div>
-    </div>
-  </section>
-  <!-- End About Section -->
-
-  <!-- Contact Section -->
-<section id="contact">
-  <div class="contact container">
-    <div>
-      <h1 class="section-title">Contact <span>info</span></h1>
-    </div>
-    <div class="contact-items">
-
-      <!-- Phone -->
-      <div class="contact-item">
-        <a href="tel:+916235784647" class="contact-link">
-          <div class="icon">
-            <img src="https://img.icons8.com/bubbles/100/000000/phone.png" />
-          </div>
-          <div class="contact-info">
-            <h1>Phone</h1>
-            <h2>+91 6235784647</h2>
-          </div>
-        </a>
-      </div>
-
-      <!-- Email -->
-      <div class="contact-item">
-        <a href="mailto:mubarisali97@gmail.com" class="contact-link">
-          <div class="icon">
-            <img src="https://img.icons8.com/bubbles/100/000000/new-post.png" />
-          </div>
-          <div class="contact-info">
-            <h1>Email</h1>
-            <h2>mubarisali97@gmail.com</h2>
-          </div>
-        </a>
-      </div>
-
-      <!-- Address -->
-      <div class="contact-item">
-        <a href="https://www.google.com/maps?q=Biyyam+ponnani,+malappuram+kerala" target="_blank" class="contact-link">
-          <div class="icon">
-            <img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" />
-          </div>
-          <div class="contact-info">
-            <h1>Address</h1>
-            <h2>Biyyam ponnani, malappuram, kerala</h2>
-          </div>
-        </a>
-      </div>
-
-    </div>
+  <!-- VS Code-style status bar -->
+  <div class="statusbar" aria-hidden="true">
+    <span class="sb-item sb-branch"><i class="fa-solid fa-code-branch"></i> main</span>
+    <span class="sb-item"><i class="fa-solid fa-circle-check"></i> 0 errors</span>
+    <span class="sb-item sb-live"><span class="dot"></span> open to work</span>
+    <span class="sb-spacer"></span>
+    <span class="sb-item" id="sb-chapter">prologue.py</span>
+    <span class="sb-item" id="sb-line">Ln 1</span>
+    <span class="sb-item">UTF-8</span>
+    <span class="sb-item"><i class="fa-brands fa-python"></i> Python 3</span>
   </div>
-</section>
 
+  <a href="#prologue" id="to-top" class="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
 
-  <!-- End Contact Section -->
-
-  <!-- Footer -->
-  <section id="footer">
-    <div class="footer container">
-      <div class="brand">
-        <h1><span>M</span>ubaris <span>A</span>li</h1>
-      </div>
-      <div class="social-icon">
-        <a href="https://wa.me/+916235784647" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://github.com/mubarisali" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/mubaris-t-a53497366" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://instagram.com/_mubaris.__" target="_blank"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-  </section>
-  <!-- End Footer -->
   <script src="./app.js"></script>
 </body>
 
